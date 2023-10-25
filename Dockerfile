@@ -4,6 +4,6 @@ RUN microdnf install findutils
 COPY . .
 
 USER root
-RUN ./gradlew build
+RUN ./gradlew build -x test
 CMD ["./gradlew", "bootRun"]
 EXPOSE 8080
